@@ -14,6 +14,11 @@ Valid Login Test
 
     fill login details
 
+Validate unsuccessful Login
+
+       fill login details    ${username}    ${invalidPassword}
+  
+
 *** Keywords ***
 
 open browser URL
@@ -21,6 +26,7 @@ open browser URL
   Open Browser         ${url}    chrome
     #Set Browser Implicit Wait    9000
 fill login details
+    [Arguments]     ${username}    ${password}
     Wait Until Element Is Visible      id: customer_menu_top
      click element    id: customer_menu_top
     input text     id:loginFrm_loginname    ${username}
