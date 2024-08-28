@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.5 on win32)" generated="2024-08-28T14:38:54.146288" rpa="false" schemaversion="5">
+<suite id="s1" name="RobotFramework d1" source="C:\Users\vasic\PycharmProjects\RobotFramework d1">
+<suite id="s1-s1" name="Tests" source="C:\Users\vasic\PycharmProjects\RobotFramework d1\tests">
+<suite id="s1-s1-s1" name="testDemo1" source="C:\Users\vasic\PycharmProjects\RobotFramework d1\tests\testDemo1.robot">
+<test id="s1-s1-s1-t1" name="validating webpage main functionalities" line="9">
+<kw name="open browser and login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-28T14:38:54.425411" level="INFO">Opening browser 'chrome' to base url 'https://automationteststore.com/'.</msg>
+<arg>https://automationteststore.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-28T14:38:54.425411" elapsed="2.740894"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id: customer_menu_top</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-08-28T14:38:57.166305" elapsed="0.029752"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-08-28T14:38:57.196057" level="INFO">Clicking element 'id: customer_menu_top'.</msg>
+<arg>id: customer_menu_top</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-28T14:38:57.196057" elapsed="0.334152"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-28T14:38:57.531206" level="INFO">Typing text 'valenciano' into text field 'id:loginFrm_loginname'.</msg>
+<arg>id:loginFrm_loginname</arg>
+<arg>valenciano</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-28T14:38:57.530209" elapsed="0.154638"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-08-28T14:38:57.685840" level="INFO">Typing text '@1234p' into text field 'id:loginFrm_password'.</msg>
+<arg>id:loginFrm_password</arg>
+<arg>@1234p</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-28T14:38:57.685840" elapsed="0.105264"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-08-28T14:38:57.791104" level="INFO">Clicking button 'xpath: //*[@id="loginFrm"]/fieldset/button'.</msg>
+<arg>xpath: //*[@id="loginFrm"]/fieldset/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-08-28T14:38:57.791104" elapsed="0.447417"/>
+</kw>
+<status status="PASS" start="2024-08-28T14:38:54.424410" elapsed="3.814111"/>
+</kw>
+<kw name=" Go to book menu and add item to wishlist">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-08-28T14:39:03.509134" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-28T14:39:03.510132" level="FAIL">Element 'xpath: //li[@class='current']//a[contains(text(),'Apparel &amp; accessories')]' not visible after 5 seconds.</msg>
+<arg>xpath: //li[@class='current']//a[contains(text(),'Apparel &amp; accessories')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-08-28T14:38:58.240513" elapsed="5.271129">Element 'xpath: //li[@class='current']//a[contains(text(),'Apparel &amp; accessories')]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath: //li[@class='current']//a[contains(text(),'Apparel &amp; accessories')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-28T14:39:03.511642" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath: //body[1]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/ul[1]/li[2]/a[1]/img[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-28T14:39:03.511642" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath: //div[@class='contentpanel']//div[1]//div[2]//a[1]//img[1]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-28T14:39:03.511642" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath:</arg>
+<arg>//a[normalize-space()='Add to wish list']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-08-28T14:39:03.511642" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-08-28T14:38:58.240513" elapsed="5.271129">Element 'xpath: //li[@class='current']//a[contains(text(),'Apparel &amp; accessories')]' not visible after 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2024-08-28T14:38:54.423958" elapsed="9.088974">Element 'xpath: //li[@class='current']//a[contains(text(),'Apparel &amp; accessories')]' not visible after 5 seconds.</status>
+</test>
+<doc>To validate the Login form</doc>
+<status status="FAIL" start="2024-08-28T14:38:54.191527" elapsed="9.322703"/>
+</suite>
+<status status="FAIL" start="2024-08-28T14:38:54.189902" elapsed="9.325329"/>
+</suite>
+<status status="FAIL" start="2024-08-28T14:38:54.148282" elapsed="9.368943"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="RobotFramework d1">RobotFramework d1</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Tests">RobotFramework d1.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="testDemo1">RobotFramework d1.Tests.testDemo1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
