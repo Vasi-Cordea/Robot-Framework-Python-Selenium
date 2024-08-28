@@ -2,12 +2,17 @@
 Documentation    To validate the Login form
 Library    SeleniumLibrary
 
-*** Test Cases ***
-Validate Succesful Login
-    open the browser payment url
-    fill the login Form
-    wait until it checks and display error message
-    verify error message is correct
+*** Variables ***
 
-    *** Keywords ***
-      open the browser payment url
+*** Test Cases ***
+LoginTest
+    Open Browser         https://demo.nopcommerce.com/    chrome
+    click link    xpath://a[@class='ico-login']
+    input text     id:Email pavanoltraining@{gmail.com
+    input text    id: Pasword Test@123
+    click element xpath://input[@class='button-1 login-button']
+    Close Browser
+
+*** Keywords ***
+
+
