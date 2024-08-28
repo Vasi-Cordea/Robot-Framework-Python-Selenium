@@ -13,6 +13,7 @@ Validate unsuccesful Login
        open browser
        fill with invalid login details
        wait until it cheacks and display error message
+       verify error message is correct
 
 *** Keywords ***
 open browser 
@@ -32,3 +33,8 @@ fill with invalid login details
     input text     id:loginFrm_loginname     valenciano
     input text    id:loginFrm_password   @1234T
     Click Button  xpath: //*[@id="loginFrm"]/fieldset/button
+
+verify error message is correct
+    ${result}Get Text    xpath: //div[@class='alert alert-error alert-danger']
+    
+    Error: Incorrect login or password provided.
