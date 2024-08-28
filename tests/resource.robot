@@ -8,6 +8,7 @@ ${username}     valenciano
 ${password}     @1234p
 ${invalidPassword}     @1234T
 ${url}    https://automationteststore.com/
+${element}   //a[normalize-space()='Flash Bronzer Body Gel']
 
 *** Keywords ***
 Close Browser session
