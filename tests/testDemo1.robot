@@ -2,21 +2,25 @@
 Documentation    To validate the Login form
 Library    SeleniumLibrary    
 #//FIX NEEDED: options.add_argument("--disable-search-engine-choice-screen")
+Test Teardown     Close Browser
 
 *** Variables ***
+${error_message_login}     xpath: //div[@class='alert alert-error alert-danger']
 
 *** Test Cases ***
-# LoginTest
-    #open browser
-   #  fill login details
+Valid Login Test
+    open browser2
+    fill login details
 Validate unsuccesful Login
-       open browser1
+       # open browser1
        fill with invalid login details
        wait until it checks and display error message
        verify error message is correct
 
 *** Keywords ***
-open browser1
+
+
+open browser2
       Log To Console  open browser for invalid pass test
   Open Browser         https://automationteststore.com/    chrome
     #Set Browser Implicit Wait    9000
@@ -43,4 +47,6 @@ verify error message is correct
     ${result}= Get Text    xpath: //div[@class='alert alert-error alert-danger']
     Log To Console      ${result}
     Should Be Equal As Strings       ${result}     Error: Incorrect login or password provided.
-   
+    #same Element Text should be    ${result}     Error: Incorrect login or password provided.
+
+Close browser session
