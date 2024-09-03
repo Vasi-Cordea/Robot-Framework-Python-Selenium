@@ -24,12 +24,13 @@ Validate Special items are displayed in Shopping Page
  #    wait 90 sec for further instruction
     open special items page
     wait until elements are visible on page    ${element}
-    Verify items title in the Shopp page
+   # Verify items title in the Shopp page
+    Select an item from list
    
 *** Keywords ***
 
 open browser URL
-      Log To Console  open browser for invalid pass test
+      Log To Console    open browser for invalid pass test
   Open Browser         ${url}    chrome
     #Set Browser Implicit Wait    9000
 
@@ -53,11 +54,27 @@ wait until elements are visible on page
     Wait Until Element Is Visible    ${element}
 
 Verify items title in the Shopp page
-   @{expectedList} = Create List    FlashBronzer   Element2    Element3    AbsoluteEye     AcquaDiGio    Element6    Element7    OkOneSummer
-    ${elements} = Get Webelements    css:.thumbnail
+    @{expectedList} =    Create List    FlashBronzer   Element2    Element3    AbsoluteEye     AcquaDiGio    Element6    Element7    OkOneSummer
+    ${elements} =    Get WebElements    css:.prdocutname
+    @{actualList} =    Create List
 
-    FOR   ${elements} IN   @{elements}
+    FOR   ${elements}    IN    @{elements}
          ${element.text}
-         log  ${element.text}
+         Log    ${element.text}
+         Append To List    @{actualList}     ${element.text}
 
     END
+    Lists Should Be Equal       @{expectedList}      @{actualList}
+
+Select an item from list
+    [Arguments]    ${cardName}
+     @{elements} =    Get WebElements    css:.prdocutname
+     ${index}= Set Variable 1
+      FOR   ${elements}    IN    @{elements}
+        Exit For Loop If    ${cardName} == ${element.text}
+       
+              ${index}=         ${index} + 1
+
+    END
+    Lists Should Be Equal       @{expectedList}      @{actualList}
+     
