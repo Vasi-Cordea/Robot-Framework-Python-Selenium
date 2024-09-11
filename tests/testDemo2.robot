@@ -77,4 +77,5 @@ Select an item from list
 
     END
     Lists Should Be Equal       @{expectedList}      @{actualList}
+    Click Button    xpath://div[@class='contentpanel']//div[1]//div[2]//a[1]//img[1]
      
