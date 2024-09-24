@@ -1,0 +1,4 @@
+*** Test Cases ***,${username},${password}
+Invalid username,vacic,@1234p
+invalid password,valenciano,aaaaaaaa
+special characters,@#assd,%&@aaa
