@@ -21,7 +21,7 @@ Valid Login Test
 
 
 Login
-    [Arguments]    ${username}     ${passsword}
+    [Arguments]      ${passsword}
       Log To Console  open browser for invalid pass test
   Open Browser         https://automationteststore.com/    chrome
     #Set Browser Implicit Wait    9000
