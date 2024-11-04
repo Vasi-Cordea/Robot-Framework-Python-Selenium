@@ -27,5 +27,7 @@ print(values)
 values [0 ] = "Ella"
 print(values)
 
+del values[0]
+
 
 
