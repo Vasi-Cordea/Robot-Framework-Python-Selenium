@@ -34,6 +34,20 @@ del values[0]
 val = (1, 2, "Vasi",  3.5)
 
 print (val[1])
-val[2] = "VASI"
+#val[2] = "VASI"
 print (val)
 
+#Dictionary
+dic = {"a":2, 4:"bcd", "c":"Hello World" }
+
+print(dic[4])
+print(dic["c"])
+
+#
+dict = {}
+dict["firstname"] = "Vasi"
+dict["lastname"] = "CRD"
+dict["Gender"] = "Male"
+
+print(dict)
+print(dict["lastname"])
