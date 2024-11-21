@@ -30,4 +30,10 @@ print(values)
 del values[0]
 
 
+#Tuple - same as LIST a type but immutable
+val = (1, 2, "Vasi",  3.5)
+
+print (val[1])
+val[2] = "VASI"
+print (val)
 
