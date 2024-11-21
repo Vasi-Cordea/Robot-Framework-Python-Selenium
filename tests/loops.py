@@ -6,7 +6,7 @@ if greeting == "Good Morning":
     print("second line")
 else:
     print("Condition did not match")
-
+# moving to left will exclude next line from if else loop
 print("if else condition code is completed")
 
 #for loop
@@ -20,4 +20,4 @@ for i in obj:
 summation = 0
 for j in range(1, 6):
     summation = summation + j
-    print(j)
+print(summation)
