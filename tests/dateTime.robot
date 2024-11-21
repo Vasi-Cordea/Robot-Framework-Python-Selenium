@@ -39,3 +39,5 @@ Get First Day Of Next Month to January In Berlin
     ${validFrom}=    Get First Day Of Next Month to January In Berlin
 
     Log    ${validFrom}
+
+   #  robot ./tests/dateTime.robot
